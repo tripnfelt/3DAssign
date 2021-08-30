@@ -11,6 +11,8 @@
 </head>
 <body>
     <h1>Supermarket Task Manager</h1>
+
+
 <div class="row">
     <div id="task">
         <p>Task:</p>
@@ -49,10 +51,48 @@
     </div>
     </div>
 
+    <h2>Task Name</h2>
 
-    <div>
-        <input Type="submit">
-    </div>
+    <form>
+        <div class="form-group">
+          <label for="AddNewTask">Task Name </label>
+          <input type="text" class="form-control" name="AddNewTask" placeholder="Add Task">
+          <label for="taskDescription">Description</label>
+          <input type="text" class="form-control" name="taskDescription" placeholder="Description">
+          <label for="dueDate">Due Date</label>
+          <input type="date" class="form-control" name="dueDate" placeholder="Enter date">
+          <br>  
+          <label for="names">Assign to:</label>
+            <select name="names" id="names">
+            <optgroup label="Assign to">
+                <option value="sj">Steve Jobs</option>
+                <option value="em">Elon Musk</option>
+                <option value="jb">Jeff Bezos</option>
+            </optgroup>
+            </select>
+        
+            <section class="Status">
+                <span>Status: </span>
+                <label for="todo">To-Do</label>
+                <input type="radio" name="todo" value="todo">
+                <label for="inProgress">In Progress</label>
+                <input type="radio" name="inProgress" value="inProgress">
+                <label for="review">Review</label>
+                <input type="radio" name="review" value="review">
+                <label for="done">Done</label>
+                <input type="radio" name="done" value="done">
+              </section>
+
+              <label for="taskP">Task Progress:</label>
+                <progress id="taskP" value="32" max="100"> 88% </progress>
+                <div>
+                    <button type="button" class="btn btn-danger">Submit</button>
+                </div>
+        
+        </div>
+      </form>
+
+
 
 </body>
 </html>
