@@ -1,4 +1,27 @@
-#task {
-    border: 3px;
-    border-radius: 20%;
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: rgb(176, 172, 231);
+  }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
 }
+
+#task {
+    background-color: rgb(148, 220, 241);
+    border: 2px white solid;
+    padding: 0px 4px;
+    border-radius: 2%;
+    box-sizing: border-box;
+    width: 300px;
+    height:300px;
+    padding: 10px;
+
+
+}
+
+
