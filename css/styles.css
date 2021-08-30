@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    padding-left: 2%;
   }
 
   body {
@@ -24,4 +25,16 @@
 
 }
 
+@media only screen and (max-width: 800px) {
+    task {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    img {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
 
