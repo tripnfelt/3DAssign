@@ -40,3 +40,10 @@ h1 {
     }
   }
 
+  form {
+    border: 2px black solid;
+    padding-top: 30px;
+    background-color: rgb(184, 223, 255);
+  }
+
+  
