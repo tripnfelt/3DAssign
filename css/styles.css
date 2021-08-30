@@ -40,6 +40,7 @@ h1 {
     }
   }
 
+
   form {
     border: 2px black solid;
     padding-top: 30px;
@@ -47,3 +48,8 @@ h1 {
   }
 
   
+
+  h1 {
+    color:rgb(199, 72, 171)
+  }
+
