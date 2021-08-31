@@ -7,7 +7,7 @@
     background-color: rgb(176, 172, 231);
   }
 
-.row {
+.container {
     display: flex;
     flex-wrap: wrap;
 }
