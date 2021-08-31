@@ -6,48 +6,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-</head>
+    <title>Supermarket to-do List</title>
+
 <body>
+</head>
+<header>
+<picture>
+    <img id="headerImage" src="images/SupermarketHeaderImage.png" alt="grocery store photo"/>
+</picture>
     <h1>Supermarket Task Manager</h1>
+</header>
 
-
+<main>
 <div class="row">
-    <div id="task">
+    <div class="card">
         <p>Task:</p>
-        <p>Desription</p>
+        <p>Description</p>
         <p>Assigned To</p>
         <p>Due Date</p>
         <p>Status</p>
+        <label for="taskP">Task Progress:</label>
+                <progress id="taskP" value="32" max="100"> 88% </progress>
     </div>
-    <div id="task">
+    <div class="card">
         <p>Task:</p>
-        <p>Desription</p>
+        <p>Description</p>
         <p>Assigned To</p>
         <p>Due Date</p>
         <p>Status</p>
+        <label for="taskP">Task Progress:</label>
+                <progress id="taskP" value="32" max="100"> 88% </progress>
     </div>
-    <div id="task">
+    <div class="card">
         <p>Task:</p>
-        <p>Desription</p>
+        <p>Description</p>
         <p>Assigned To</p>
         <p>Due Date</p>
         <p>Status</p>
+        <label for="taskP">Task Progress:</label>
+                <progress id="taskP" value="32" max="100"> 88% </progress>
     </div>
-    <div id="task">
+    <div class="card">
         <p>Task:</p>
-        <p>Desription</p>
+        <p>Description</p>
         <p>Assigned To</p>
         <p>Due Date</p>
         <p>Status</p>
+        <label for="taskP">Task Progress:</label>
+                <progress id="taskP" value="32" max="100"> 88% </progress>
     </div>
-    <div id="task">
+    <div class="card">
         <p>Task:</p>
-        <p>Desription</p>
+        <p>Description</p>
         <p>Assigned To</p>
         <p>Due Date</p>
         <p>Status</p>
+        <label for="taskP">Task Progress:</label>
+                <progress id="taskP" value="32" max="100"> 88% </progress>
     </div>
     </div>
 
@@ -60,7 +75,7 @@
           <label for="taskDescription">Description</label>
           <input type="text" class="form-control" name="taskDescription" placeholder="Description">
           <label for="dueDate">Due Date</label>
-          <input type="date" class="form-control" name="dueDate" placeholder="Enter date">
+          <input type="date" class="date" name="dueDate" placeholder="Enter date" >
           <br>  
           <label for="names">Assign to:</label>
             <select name="names" id="names">
@@ -82,17 +97,21 @@
                 <label for="done">Done</label>
                 <input type="radio" name="done" value="done">
               </section>
-
-              <label for="taskP">Task Progress:</label>
-                <progress id="taskP" value="32" max="100"> 88% </progress>
                 <div>
                     <button type="button" class="btn btn-danger">Submit</button>
                 </div>
         
         </div>
       </form>
+</main>
+<footer>
+    <br>
+<p><strong>Copyright 2021 @3D Junior designers</strong></p> 
+<picture>
+<img id="3dlogo" src="/images/3D_logo-02.svg" alt="3d logo"/>
+</picture>
 
-
+</footer>
 
 </body>
 </html>
