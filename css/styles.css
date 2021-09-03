@@ -1,71 +1,76 @@
 * {
-    box-sizing: border-box;
-    padding-left:2%;
-  }
+  box-sizing: border-box;
 
-  body {
-    background-color: rgb(176, 172, 231);
-  }
+}
+
+body {
+  background-color: rgb(176, 172, 231);
+}
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card {
-    background-color: rgb(148, 220, 241);
-    border: 2px white solid;
-    padding: 0px 4px;
-    border-radius: 2%;
-    box-sizing: border-box;
-    width: 300px;
-    height:300px;
-    padding: 10px;
-    margin: 10px; 
-  }
+  background-color: rgb(148, 220, 241);
+  border: 2px white solid;
+  padding: 0px 4px;
+  border-radius: 2%;
+  box-sizing: border-box;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  margin: 10px;
+}
 
 h1 {
-  color:pink;
+  color: pink;
 }
 
 @media only screen and (max-width: 800px) {
-    task {
-        flex-basis: 50%;
-        max-width: 50%;
-    }
+  task {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
 }
 @media only screen and (max-width: 600px) {
-    img {
-      flex-basis: 100%;
-      max-width: 100%;
-    }
+  img {
+    flex-basis: 100%;
+    max-width: 100%;
   }
+}
 
+form {
+  border: 2px black solid;
+  padding: 10px 10px 0 15px;
+  background-color: rgb(184, 223, 255);
+}
 
-  form {
-    border: 2px black solid;
-    padding: 10px 10px 0 15px;
-    background-color: rgb(184, 223, 255);
+date {
+  width: 70px;
+}
 
-    
-  }
+h1 {
+  color: rgb(199, 72, 171);
+}
 
-  date {
-    width: 70px;
-  }
+#headerImage {
+  width: 100%;
+}
 
-  h1 {
-    color:rgb(199, 72, 171)
-  }
+footer {
+  color: rgb(39, 38, 38);
+}
 
-  #headerImage {
-    width: 100%;
-  }
+/* #logo {
+  width: 50%;
+}
 
-  footer {
-    color: rgb(39, 38, 38);
-  }
+#names {
+  width: 50px;
+}
 
-  #3dlogo{
-    height: 20px;
-  }
+#dueDate {
+   width: 50px;
+} */
