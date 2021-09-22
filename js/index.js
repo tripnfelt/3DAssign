@@ -1,5 +1,5 @@
 const taskManager = new TaskManager(0);
-
+console.log (taskManager)
 
 const form = document.querySelector("#mainForm");
 
@@ -79,4 +79,3 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-console.log(TaskManager)
