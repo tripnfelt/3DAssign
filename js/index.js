@@ -93,3 +93,6 @@ let whichischecked;
   console.log(taskManager.tasks)
 });
 
+let taskHtml= createTaskHtml();
+console.log (taskHtml);
+
