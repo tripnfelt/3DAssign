@@ -1,5 +1,7 @@
 const taskManager = new TaskManager(0);
-console.log (taskManager)
+
+// test
+
 
 const form = document.querySelector("#mainForm");
 
@@ -28,6 +30,7 @@ form.addEventListener("submit", (event) => {
     validateName.classList.remove("is-valid");
     validationFail++;
   }
+  console.log(validationFail)
 
   // Form validation for Task Description Field min length 5
   if (validateDescription.value.length > 5) {
@@ -38,9 +41,9 @@ form.addEventListener("submit", (event) => {
     validateDescription.classList.remove("is-valid");
     validationFail++;
   }
-
+  console.log(validationFail)
   // Form validation for Task Assigned Field min length 5
-  if (validateAssignedTo.value.length > 5) {
+  if (validateAssignedTo.value) {
     validateAssignedTo.classList.add("is-valid");
     validateAssignedTo.classList.remove("is-invalid");
   } else {
@@ -48,6 +51,7 @@ form.addEventListener("submit", (event) => {
     validateAssignedTo.classList.remove("is-valid");
     validationFail++;
   }  
+  console.log(validationFail)
   // Form validation for Due Date Field not empty
   // try your own validation for a date in the future
   if (validateDueDate.value) {
@@ -60,22 +64,32 @@ form.addEventListener("submit", (event) => {
     console.log("else block")
     validationFail++;
   }
-  // Form validation for Task Status Field not empty
-  if (validateAssignedTo.value) {
-    validateAssignedTo.classList.add("is-valid");
-    validateAssignedTo.classList.remove("is-invalid");
-  } else {
-    validateAssignedTo.classList.add("is-invalid");
-    validateAssignedTo.classList.remove("is-valid");
-    validationFail++;
-  }
+  console.log(validationFail)
+
   // If validation fails then function will not proceed further and
   // will return. The value of validationFail will also needed to be
   // reset to 0.
   // ----------------------------------------------------------------------------------
   if (validationFail > 0) {
     validationFail = 0;
+    document.getElementById("mainForm").reset();
     return;
   }
+
+   
+  
+let whichischecked;
+  function displayRadioValue() {
+    var ele = document.getElementsByName('options');
+
+      
+    for(i = 0; i < ele.length; i++) {
+        if(ele[i].checked)
+        whichischecked = ele[i].value;
+    }
+  }
+  displayRadioValue()
+  taskManager.addTask(validateName.value, validateDescription.value, validateAssignedTo.value, validateDueDate.value, whichischecked);
+  console.log(taskManager.tasks)
 });
 

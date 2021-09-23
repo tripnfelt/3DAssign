@@ -4,9 +4,8 @@ class TaskManager {
     this.tasks = [];
     this.currentId = currentId;
   }
-}
-//test
-console.log(taskManager.tasks)
+
+  addTask(taskName, comment, names, dueDate, taskStatus) {
 
 //add task method
 const task = {
@@ -18,5 +17,7 @@ const task = {
   taskStatus: taskStatus,
 };
 
-this.tasks.push({ task });
 
+this.tasks.push({ task });
+}
+} 
