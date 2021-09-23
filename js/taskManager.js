@@ -14,6 +14,7 @@ const html =`<div class="card">
 return html;
 };
 
+
 //TaskManager Class
 class TaskManager {
   constructor(currentId = 0) {
@@ -36,4 +37,27 @@ const task = {
 
 this.tasks.push({ task });
 }
-} 
+
+
+render () {
+  let tasksHtmlList = [];
+  for (let i = 0; i < this.tasks.length; i++) {
+    const task = this.tasks [i];
+    const date = new Date (task.dueDate);
+    const formattedDate = date.getDate () + "/" +(date.getMonth() + 1) + "/" + date.getFullYear();
+     const taskHtml = createTaskHtml (
+      task.id,
+      task.taskName,
+      task.comment,
+      task.names,
+      formattedDate,
+      task.taskStatus,
+   );
+   tasksHtmlList.push (taskHtml);
+  }
+   const taskHtml = tasksHtmlList.join ("\n");
+   const taskList = document.querySelector ("#mainForm");
+   taskList.innerHTML = taskHtml;
+}
+}
+
