@@ -26,7 +26,7 @@ class TaskManager {
 
 //add task method
 const task = {
-  id: this.currentId++,
+  // id: this.currentId++,
   taskName: taskName,
   comment: comment,
   names: names,
@@ -47,10 +47,11 @@ render () {
     const date = new Date (task.dueDate);
     const formattedDate = date.getDate () + "/" +(date.getMonth() + 1) + "/" + date.getFullYear();
     const taskHtml = createTaskHtml (
-      task.id,
+      // task.id,
       task.taskName,
       task.comment,
-      task.names,
+      // task.names.innerHTML 
+      task.names = names.value.innerHTML,
       formattedDate,
       task.taskStatus,
    );
