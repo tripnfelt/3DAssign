@@ -14,7 +14,23 @@ form.addEventListener("submit", (event) => {
   let validationFail = 0;
 
   event.preventDefault();
+//
+// Call this to clear all the form fields after the submission
+const clearFormFields = () => {
+  validateName.value = "";
+  validateDescription.value = "";
+  validateAssignedTo.value = "";
+  validateStatus.value = "In Progress";
+  validateDueDate.value = "";
+  validateName.classList.remove("is-valid");
+  validateDescription.classList.remove("is-valid");
+  validateAssignedTo.classList.remove("is-valid");
+  validateStatus.classList.remove("is-valid");
+  validateDueDate.classList.remove("is-valid");
+};
+
   event.stopPropagation();
+
   console.log("Task Name :" + validateName.value.length);
   console.log("Task Description :" + validateDescription.value.length);
   console.log("Task Assigned To :" + validateAssignedTo.value.length);
@@ -64,21 +80,7 @@ form.addEventListener("submit", (event) => {
     console.log("else block")
     validationFail++;
   }
-  console.log(validationFail)
-
-  // If validation fails then function will not proceed further and
-  // will return. The value of validationFail will also needed to be
-  // reset to 0.
-  // ----------------------------------------------------------------------------------
-  if (validationFail > 0) {
-    validationFail = 0;
-    document.getElementById("mainForm").reset();
-    return;
-  }
-
-   
-  
-let whichischecked;
+  let whichischecked;
   function displayRadioValue() {
     var ele = document.getElementsByName('options');
 
@@ -87,12 +89,53 @@ let whichischecked;
         if(ele[i].checked)
         whichischecked = ele[i].value;
     }
+    return whichischecked
   }
-  displayRadioValue()
-  taskManager.addTask(validateName.value, validateDescription.value, validateAssignedTo.value, validateDueDate.value, whichischecked);
-  console.log(taskManager.tasks)
+  let newStatus = displayRadioValue()
+  console.log(newStatus)
+  
+// // If validation fails then function will not proceed further and
+//   // will return. The value of validationFail will also needed to be
+//   // reset to 0.
+//   // ----------------------------------------------------------------------------------
+   if (validationFail > 0) {
+     validationFail = 0;
+     return;
+   } else {
+    taskManager.addTask(validateName.value, validateDescription.value, validateAssignedTo.value, validateDueDate.value, newStatus);
+    console.log(taskManager.tasks)
+
+          clearFormFields ();
+          taskManager.render();
+    };
+
+
+
+  
+
 });
 
 let taskHtml= createTaskHtml();
 console.log (taskHtml);
 
+// // If validation fails then function will not proceed further and
+//   // will return. The value of validationFail will also needed to be
+//   // reset to 0.
+//   // ----------------------------------------------------------------------------------
+//   if (validationFail > 0) {
+//     validationFail = 0;
+//     // document.getElementById("mainForm").reset();
+//     return;
+//   } else {
+//      taskManager.addTask (
+//      validateName.value,
+//      validateDescription.value,
+//      validateAssignedTo.value,
+//      validateDueDate.value,
+//      validateStatus.value
+//      );
+//      }   
+
+//      clearFormFields ();
+//      taskManager.render();
+  

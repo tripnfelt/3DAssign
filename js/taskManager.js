@@ -33,9 +33,10 @@ const task = {
   dueDate: dueDate,
   taskStatus: taskStatus,
 };
+console.log("hello");
+console.log(task);
 
-
-this.tasks.push({ task });
+this.tasks.push( task );
 }
 
 
@@ -45,7 +46,7 @@ render () {
     const task = this.tasks [i];
     const date = new Date (task.dueDate);
     const formattedDate = date.getDate () + "/" +(date.getMonth() + 1) + "/" + date.getFullYear();
-     const taskHtml = createTaskHtml (
+    const taskHtml = createTaskHtml (
       task.id,
       task.taskName,
       task.comment,
@@ -53,10 +54,12 @@ render () {
       formattedDate,
       task.taskStatus,
    );
+   console.log("hello");
+   console.log(taskHtml);
    tasksHtmlList.push (taskHtml);
   }
    const taskHtml = tasksHtmlList.join ("\n");
-   const taskList = document.querySelector ("#mainForm");
+   const taskList = document.querySelector ("#cardContainer");
    taskList.innerHTML = taskHtml;
 }
 }
