@@ -7,6 +7,11 @@ const html =`<div class="card">
 <p>Assigned To: ${names}</p>
 <p>Due Date:${dueDate}</p>
 <p>Status: ${taskStatus}</p>
+<div><p>
+  <button class="btn btn-outline-success done-button">Done</button>
+</p>
+</div>  
+
 <label for="taskP">Task Progress:</label>
 <progress id="taskP" value="100" max="100">100%</progress>
 </div>`;
@@ -26,7 +31,7 @@ class TaskManager {
 
 //add task method
 const task = {
-  // id: this.currentId++,
+  id: this.currentId++,
   taskName: taskName,
   comment: comment,
   names: names,
@@ -50,8 +55,8 @@ render () {
       // task.id,
       task.taskName,
       task.comment,
-      // task.names.innerHTML 
-      task.names = names.value.innerHTML,
+      task.names, 
+     // task.names = names.value.innerHTML,
       formattedDate,
       task.taskStatus,
    );
