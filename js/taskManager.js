@@ -1,4 +1,5 @@
 //creating Task HTML
+//
 
 const createTaskHtml = (taskName, comment, names, dueDate, taskStatus,id)=>{
 const html =`<div class="card" data-task-id="${id}">
@@ -8,12 +9,9 @@ const html =`<div class="card" data-task-id="${id}">
 <p>Due Date:${dueDate}</p>
 <p>Status: ${taskStatus}</p>
 <div><p>
-  <button class="btn btn-outline-success done-button">Done</button>
+  <button class="btn btn-outline-success done-button" id="doneButton">Done</button>
 </p>
 </div>  
-
-<label for="taskP">Task Progress:</label>
-<progress id="taskP" value="100" max="100">100%</progress>
 </div>`;
 
 return html;
@@ -59,8 +57,6 @@ getTaskById(taskId) {
  }
     return foundTask
 }
-
-
 
 render () {
   let tasksHtmlList = [];

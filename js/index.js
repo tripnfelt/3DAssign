@@ -118,7 +118,7 @@ taskList.addEventListener("click", (event) => {
 if (event.target.classList.contains("done-button")) {
 //     // Get the correct parent Task, yours might be slightly different
 //     // Use console.log(event.target.parentElement) to see
-    console.log(event.target.parentElement);
+
     const parentTask =
           event.target.parentElement.parentElement.parentElement;
 //     // Get the taskId of the parent Task and turn it into a number.
@@ -128,11 +128,12 @@ if (event.target.classList.contains("done-button")) {
     const task = taskManager.getTaskById(taskId);
 //     // Update the task status to 'DONE'
 
-console.log(task)
     task.taskStatus = "Done";
-//   console.log (task.status);
 //     // Render the tasks
+
     taskManager.render();
+
+    document.querySelector("#doneButton").style.display="none";
    }
  });
   
