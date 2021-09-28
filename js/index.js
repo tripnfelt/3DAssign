@@ -111,28 +111,28 @@ const clearFormFields = () => {
 
 });
 
-// let taskHtml= createTaskHtml();
-// console.log (taskHtml);
-// console.log ("here hello line 116 *");
-// const taskList = document.querySelector("#task-list");
+const taskList = document.querySelector("#cardContainer");
 // // Add an 'onclick' event listener to the Tasks List
-// taskList.addEventListener("click", (event) => {
+taskList.addEventListener("click", (event) => {
 //   // Check if a "Mark As Done" button was clicked
-//   if (event.target.classList.contains("done-button")) {
+if (event.target.classList.contains("done-button")) {
 //     // Get the correct parent Task, yours might be slightly different
 //     // Use console.log(event.target.parentElement) to see
-// console.log(event.target.parentElement);
-//     const parentTask =
-//       event.target.parentElement.parentElement.parentElement.parentElement;
+    console.log(event.target.parentElement);
+    const parentTask =
+          event.target.parentElement.parentElement.parentElement;
 //     // Get the taskId of the parent Task and turn it into a number.
-//     const taskId = Number(parentTask.dataset.taskId);
+    const taskId = Number(parentTask.dataset.taskId);
+
 //     // Get the task from the TaskManager using the taskId
-//     const task = taskManager.getTaskById(taskId);
+    const task = taskManager.getTaskById(taskId);
 //     // Update the task status to 'DONE'
-//     task.status = "Done";
+
+console.log(task)
+    task.taskStatus = "Done";
 //   console.log (task.status);
 //     // Render the tasks
-//     taskManager.render();
-//   }
-// });
+    taskManager.render();
+   }
+ });
   

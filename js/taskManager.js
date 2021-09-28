@@ -1,7 +1,7 @@
 //creating Task HTML
 
-const createTaskHtml = (taskName, comment, names, dueDate, taskStatus)=>{
-const html =`<div class="card">
+const createTaskHtml = (taskName, comment, names, dueDate, taskStatus,id)=>{
+const html =`<div class="card" data-task-id="${id}">
 <p>Task: ${taskName}</p>
 <p>Description: ${comment}</p>
 <p>Assigned To: ${names}</p>
@@ -43,6 +43,23 @@ console.log(task);
 
 this.tasks.push( task );
 }
+//  get task id
+
+getTaskById(taskId) {
+
+ let foundTask; 
+ for (let i=0;i< this.tasks.length; i++) {
+    let task
+    task = this.tasks[i];
+    console.log(task.id)
+    if (task.id === taskId) {
+      foundTask = task;
+      console.log("found task:" + foundTask)
+    }
+ }
+    return foundTask
+}
+
 
 
 render () {
@@ -59,6 +76,7 @@ render () {
      // task.names = names.value.innerHTML,
       formattedDate,
       task.taskStatus,
+      task.id
    );
    console.log("hello");
    console.log(taskHtml);
