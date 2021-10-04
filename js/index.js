@@ -1,8 +1,12 @@
+// Initialize a new TaskManager with currentID set to 0;
 const taskManager = new TaskManager(0);
 
-// test
-
-
+// Task9  |/
+// Load the tasks from localStorage
+taskManager.load();
+// Render the loaded tasks to the page
+taskManager.render();
+// Task-9 /|
 const form = document.querySelector("#mainForm");
 
 form.addEventListener("submit", (event) => {
@@ -102,11 +106,22 @@ const clearFormFields = () => {
      validationFail = 0;
      return;
    } else {
-    taskManager.addTask(validateName.value, validateDescription.value, validateAssignedTo.value, validateDueDate.value, newStatus);
-    console.log(taskManager.tasks)
+     // Push the valid input into our task array
 
-          clearFormFields ();
-          taskManager.render();
+    taskManager.addTask(
+      validateName.value,
+      validateDescription.value,
+      validateAssignedTo.value, validateDueDate.value,
+      newStatus
+      );
+      // console.log("taskmanager Task display" + taskManager.tasks)
+      console.log("taskmanager Task display" + newStatus)
+
+
+      clearFormFields ();
+      taskManager.save();    // task-9
+      taskManager.render();
+
     };
 
 });
@@ -135,5 +150,27 @@ if (event.target.classList.contains("done-button")) {
 
     document.querySelector("#doneButton").style.display="none";
    }
+
+  // Check if a "Delete" button was clicked                                    // Task-10 Deletion Start \|/
+  if (event.target.classList.contains("delete-button")) {
+    // Get the parent Task
+    const parentTask =
+      event.target.parentElement.parentElement.parentElement;
+
+    // Get the taskId of the parent Task.
+    const taskId = Number(parentTask.dataset.taskId);
+
+    // Delete the task
+    taskManager.deleteTask(taskId);
+
+    // Save the tasks to localStorage
+    taskManager.save();
+
+    // Render the tasks
+    taskManager.render();
+  }                                                                             // Task-10 Deletion End   /|\
+
+
+
  });
   
