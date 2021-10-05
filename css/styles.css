@@ -99,7 +99,7 @@ border:0px;
 
 .parallax {
   background-color: rgb(255, 133, 62);
-  background-image: url(/images/supermarketBG.jpg);
+  background-image: url(../images/supermarketBG.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
