@@ -3,7 +3,7 @@
 const createTaskHtml = (taskName, comment, names, dueDate, taskStatus, id) => {
   const html = `<div class="card" data-task-id="${id}">
 <p>Task: ${taskName}</p>
-<p>Description: ${comment}</p>
+<p>Description: <textarea id="desctextarea" rows="3" cols="20" id="text">${comment}</textarea></p>
 <p>Assigned To: ${names}</p>
 <p>Due Date:${dueDate}</p>
 <p>Status: ${taskStatus}</p>
