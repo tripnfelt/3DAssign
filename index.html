@@ -15,7 +15,7 @@
   </head>
   <body>
     <header>
-      <!-- header image starts here -->
+      <!-- header image starts here
       <picture>
         <img
           id="headerImage"
@@ -23,7 +23,7 @@
           alt="grocery store photo" height="300px"
         />
       </picture>
-      <!-- header image ends here -->
+      header image ends here -->
 
       <h1>Supermarket Task Manager</h1>
     </header>
@@ -31,7 +31,7 @@
     <main>
       <!-- cards start her -->
       <div class="container" id="cardContainer">
-        <div class="card" >
+        <div class="card">
           <p>Task: Sweep Floor</p>
           <p>Description: please sweep the floor near the cashier</p>
           <p>Assigned To: Steve Jobs</p>
@@ -77,8 +77,7 @@
           <progress id="taskP" value="32" max="100">88%</progress>
         </div>
 
-      <div id="done"></div>  
-
+        <div id="done"></div>
       </div>
 
       <!-- cards end here -->
@@ -98,36 +97,31 @@
             id="taskName"
           />
           <div class="valid-feedback">Looks good!</div>
-          <div class="invalid-feedback">
-            Please provide a valid Task name.
-          </div>
-      
-          <div class="col">
-          <label id = "taskDescription" for="comment" >Description</label>
-          <textarea class="form-control" rows="5" id="comment"></textarea>
+          <div class="invalid-feedback">Please provide a valid Task name.</div>
 
-          <div class="valid-feedback">Looks good!</div>
-          <div class="invalid-feedback">
-            Please provide a valid Task Description.
-          </div>
+          <div class="col">
+            <label id="taskDescription" for="comment">Description</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">
+              Please provide a valid Task Description.
+            </div>
           </div>
 
           <div class="col">
-          <label for="dueDate">Due Date</label>
-          <input
-            type="date"
-            class="date"
-            name="dueDate"
-            placeholder="Enter date"
-            id="dueDate"
-          />
-          <div class="valid-feedback">Looks good!</div>
-          <div class="invalid-feedback">
-            Please provide a valid Due Date.
-          </div>
+            <label for="dueDate">Due Date</label>
+            <input
+              type="date"
+              class="date"
+              name="dueDate"
+              placeholder="Enter date"
+              id="dueDate"
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please provide a valid Due Date.</div>
           </div>
 
-          
           <br />
           <label for="names">Assign to:</label>
           <select name="names" id="names">
@@ -145,16 +139,23 @@
               <input type="radio" name="options" id="toDo" value="toDo" /> To-Do
             </label>
             <label class="radio-inline">
-              <input type="radio" name="options" id="inProgress" value="inProgress" /> In Progress
+              <input
+                type="radio"
+                name="options"
+                id="inProgress"
+                value="inProgress"
+              />
+              In Progress
             </label>
             <label class="radio-inline">
-              <input type="radio" name="options" id="review" value="review" /> Review
+              <input type="radio" name="options" id="review" value="review" />
+              Review
             </label>
             <label class="radio-inline">
               <input type="radio" name="options" id="Done" value="Done" /> Done
             </label>
           </div>
-          
+
           <div>
             <button type="submit" class="btn btn-danger">Submit</button>
           </div>
@@ -167,20 +168,23 @@
     <!-- footer and image start here -->
     <footer>
       <br />
-      <p><img  src="./images/3D_logo-02.svg" alt="3d logo" width="150px" /><strong> Copyright 2021 @3D Junior designers</strong></p>
-      <picture id="logo">
-      </picture>
+      <p>
+        <img
+          src="./images/3D_logo-02.svg"
+          alt="3d logo"
+          width="150px"
+        /><strong> Copyright 2021 @3D Junior designers</strong>
+      </p>
+      <picture id="logo"> </picture>
     </footer>
-    
+
     <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-    crossorigin="anonymous"
-  ></script>
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="js/taskManager.js"></script>
-  <script src="js/index.js"></script>
-
-
+    <script src="js/taskManager.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
