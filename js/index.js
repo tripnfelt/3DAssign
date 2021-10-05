@@ -78,16 +78,32 @@ form.addEventListener("submit", (event) => {
   console.log(validationFail);
   // Form validation for Due Date Field not empty
   // try your own validation for a date in the future
-  if (validateDueDate.value) {
-    validateDueDate.classList.add("is-valid");
-    validateDueDate.classList.remove("is-invalid");
-  } else {
-    validateDueDate.classList.add("is-invalid");
-    validateDueDate.classList.remove("is-valid");
-    console.log("else block");
-    validationFail++;
-  }
+
+  var selectedDate = new Date(validateDueDate.value);
+  var now = new Date();
+  // console.log("date now ++++" + now + "date entered" + selectedDate);
+  if (selectedDate < now) {
+     validateDueDate.classList.add("is-invalid");
+     validateDueDate.classList.remove("is-valid");
+     validationFail++;
+    //  alert("Date must be in the future");
+     } else {
+     validateDueDate.classList.add("is-valid");
+     validateDueDate.classList.remove("is-invalid");
+     }
+
+  // if (validateDueDate.value) {
+  //   validateDueDate.classList.add("is-valid");
+  //   validateDueDate.classList.remove("is-invalid");
+  // } else {
+  //   validateDueDate.classList.add("is-invalid");
+  //   validateDueDate.classList.remove("is-valid");
+  //   console.log("else block");
+  //   validationFail++;
+  // }
+  
   let whichischecked;
+
   function displayRadioValue() {
     var ele = document.getElementsByName("options");
 

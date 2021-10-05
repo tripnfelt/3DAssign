@@ -1,31 +1,44 @@
 * {
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  background-color: rgb(176, 172, 231);
+  background-color: rgb(205, 227, 255);
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
-  background-color: rgb(148, 220, 241);
-  border: 2px white solid;
-  padding: 0px 4px;
-  border-radius: 2%;
+  color:rgba(9, 29, 19);
+  background-color: rgba(255, 133, 62, 0.932);
+  border: 0px rgb(175, 255, 173) solid;
+  border-radius: 0%;
+  padding: 10%;
   box-sizing: border-box;
   width: 300px;
-  height: 300px;
+  height: 340px;
   padding: 10px;
   margin: 10px;
 }
 
-h1 {
-  color: pink;
+h1, h2{
+  color: rgb(255, 94, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 2%; 
+  
 }
+
 
 @media only screen and (max-width: 800px) {
   task {
@@ -41,17 +54,18 @@ h1 {
 }
 
 form {
-  border: 2px black solid;
-  padding: 10px 10px 0 15px;
-  background-color: rgb(184, 223, 255);
+  /* border: 2px black solid; */
+  align-items: center;
+  margin: 0 auto;
+  width: 500px;
+  padding: 30px;
+  background-color: rgba(9, 29, 19, 0.849);
+  color: rgb(255, 133, 62);
+  text-align:center;
 }
 
 date {
   width: 70px;
-}
-
-h1 {
-  color: rgb(199, 72, 171);
 }
 
 #headerImage {
@@ -76,6 +90,26 @@ footer {
 
 
 #desctextarea {
-background-color: aqua;
+background-color: rgb(235, 255, 255);
+height:80px;
+width:270px;
+border:0px;
 
+}
+
+.parallax {
+  background-color: rgb(255, 133, 62);
+  background-image: url(/images/supermarketBG.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer {
+  padding-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
 }
