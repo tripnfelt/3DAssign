@@ -156,9 +156,31 @@ taskList.addEventListener("click", (event) => {
 
     task.taskStatus = "Done";
     //     // Render the tasks
-
+    taskManager.save();
     taskManager.render();
   }
+  
+  if (event.target.classList.contains("update-button")) {
+    //     // Get the correct parent Task, yours might be slightly different
+    //     // Use console.log(event.target.parentElement) to see
+    const parentTask = event.target.parentElement.parentElement.parentElement;
+    //     // Get the taskId of the parent Task and turn it into a number.
+    const taskId = Number(parentTask.dataset.taskId);
+
+    const textArea = event.target.parentElement.parentElement.parentElement.childNodes[3].childNodes[1]
+    const textAreaValue = textArea.value
+    console.log(textAreaValue)
+    //     // Get the task from the TaskManager using the taskId
+    const task = taskManager.getTaskById(taskId);
+    //     // Update the task status to 'DONE'
+
+    task.comment = textAreaValue;
+    // //     // Render the tasks
+    taskManager.save();
+    taskManager.render();
+  }
+
+
 
   // Check if a "Delete" button was clicked
   if (event.target.classList.contains("delete-button")) {

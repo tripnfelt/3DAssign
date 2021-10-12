@@ -10,6 +10,60 @@ body {
   justify-content: center; */
 }
 
+.buttons-coll {
+  width: 90%;
+  margin: 50px auto;
+  text-align: center;
+}
+button {
+  margin: 20px;
+}
+.custom-btn {
+  padding: 10px 25px;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+.btn-1 {
+  border: 2px solid #ff5e00;
+  color: #ff5e00;
+}
+.btn-1:hover {
+  background: #ff5e00;
+  color: #fff;
+}
+.btn-1:active {
+  top: 2px;
+}
+
+.done-button, .delete-button, .update-button {
+  padding: 10px 25px;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-2 {
+  border: 2px solid #fff;
+  color: #fff;
+}
+.btn-2:hover {
+  background: #fff;
+  color: #ff5e00;
+}
+.btn-2:active {
+  top: 2px;
+}
+
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -23,8 +77,8 @@ body {
   border-radius: 0%;
   padding: 10%;
   box-sizing: border-box;
-  width: 300px;
-  height: 340px;
+  /* width: 300px;
+  height: 400px; */
   padding: 10px;
   margin: 10px;
 }

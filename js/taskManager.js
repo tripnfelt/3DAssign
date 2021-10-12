@@ -8,10 +8,13 @@ const createTaskHtml = (taskName, comment, names, dueDate, taskStatus, id) => {
 <p>Due Date:${dueDate}</p>
 <p>Status: ${taskStatus}</p>
 <div><p>
-  <button class="done-button ${
+  <button class="done-button btn-2 ${
     taskStatus === "Done" ? "invisible" : "visible"
   }">Done</button>
-  <button class="delete-button" id="deleteButton">Delete</button>
+  <button class="delete-button btn-2" id="deleteButton">Delete</button>
+  <button class="update-button btn-2" id="updateButton">Update</button>
+
+  
 </p>
 </div>  
 </div>`;
