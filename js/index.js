@@ -16,8 +16,6 @@ form.addEventListener("submit", (event) => {
   const validateStatus = document.querySelector("#taskStatus");
   let validationFail = 0;
 
-
-
   event.preventDefault();
   //
   // Call this to clear all the form fields after the submission
@@ -78,37 +76,20 @@ form.addEventListener("submit", (event) => {
   }
   //log if there's a validation fail to console
   console.log(validationFail);
-  
+
   // try your own validation for a date in the future
 
   var selectedDate = new Date(validateDueDate.value);
   var now = new Date();
   // console.log("date now ++++" + now + "date entered" + selectedDate);
-  if ( (selectedDate < now) || (isNaN(selectedDate)) ) {
-     validateDueDate.classList.add("is-invalid");
-     validateDueDate.classList.remove("is-valid");
-     validationFail++;
-    
-     } else {
-     validateDueDate.classList.add("is-valid");
-     validateDueDate.classList.remove("is-invalid");
-     }
-if (isNaN(selectedDate)) {
-  console.log("lalalal " + selectedDate);
-}
-  
-// Form validation for Due Date Field not empty
-
-// if (validateDueDate.value) {
-  //   validateDueDate.classList.add("is-valid");
-  //   validateDueDate.classList.remove("is-invalid");
-  // } else {
-  //   validateDueDate.classList.add("is-invalid");
-  //   validateDueDate.classList.remove("is-valid");
-  //   console.log("else block");
-  //   validationFail++;
-  // }
-  
+  if (selectedDate < now || isNaN(selectedDate)) {
+    validateDueDate.classList.add("is-invalid");
+    validateDueDate.classList.remove("is-valid");
+    validationFail++;
+  } else {
+    validateDueDate.classList.add("is-valid");
+    validateDueDate.classList.remove("is-invalid");
+  }
 
   //checking which of group of radio buttons selected
   let whichischecked;
@@ -168,7 +149,6 @@ taskList.addEventListener("click", (event) => {
     taskManager.save();
     taskManager.render();
   }
-  
 
   //update button
   if (event.target.classList.contains("update-button")) {
@@ -179,9 +159,11 @@ taskList.addEventListener("click", (event) => {
     const taskId = Number(parentTask.dataset.taskId);
 
     //find the text areas parent tree
-    const textArea = event.target.parentElement.parentElement.parentElement.childNodes[3].childNodes[1]
-    const textAreaValue = textArea.value
-    console.log(textAreaValue)
+    const textArea =
+      event.target.parentElement.parentElement.parentElement.childNodes[3]
+        .childNodes[1];
+    const textAreaValue = textArea.value;
+    console.log(textAreaValue);
     //     // Get the task from the TaskManager using the taskId
     const task = taskManager.getTaskById(taskId);
     alert("Task description updated and saved");
@@ -191,8 +173,6 @@ taskList.addEventListener("click", (event) => {
     taskManager.save();
     taskManager.render();
   }
-
-
 
   // Check if a "Delete" button was clicked
   if (event.target.classList.contains("delete-button")) {

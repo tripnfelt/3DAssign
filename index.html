@@ -12,18 +12,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Supermarket to-do List</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  
-  <body id= "parallax" class="parallax">
+
+  <body id="parallax" class="parallax">
     <header>
       <h1>Supermarket Task Manager</h1>
     </header>
 
     <main>
-      <!-- cards start her -->
+      <!-- Card container starts here, the example cards inside won't be rendered in app - just to mockup layout -->
       <div class="container" id="cardContainer">
         <div class="card">
           <p>Task: Sweep Floor</p>
@@ -74,7 +77,7 @@
         <div id="done"></div>
       </div>
 
-      <!-- cards end here -->
+      <!-- cards container end here -->
 
       <!-- Form starts here -->
 
@@ -98,13 +101,11 @@
             <textarea class="form-control" rows="5" id="comment"></textarea>
 
             <div class="valid-feedback">Looks good!</div>
-            <div class="invalid-feedback">
-              Minimum length of 20 Characters.
-            </div>
+            <div class="invalid-feedback">Minimum length of 20 Characters.</div>
           </div>
 
           <div class="col">
-            <label for="dueDate">Due Date</label><br>
+            <label for="dueDate">Due Date</label><br />
             <input
               type="date"
               class="date"
@@ -117,20 +118,29 @@
           </div>
 
           <br />
-          <label for="names">Assign to:</label><br>
+          <label for="names">Assign to:</label><br />
           <select name="names" id="names">
             <optgroup label="Assign to">
               <option value="Steve Jobs" id="sj" selected>Steve Jobs</option>
+              <!-- Keep selected for validation without JS -->
               <option value="Elon Musk" id="em">Elon Musk</option>
               <option value="Jeff Bezos" id="jb">Jeff Bezos</option>
             </optgroup>
           </select>
-          <br>
+          <br />
 
           <div class="btn-group" data-toggle="buttons" id="taskStatus">
             <span>Status: &nbsp;</span>
             <label class="radio-inline">
-              <input type="radio" name="options" id="toDo" value="To Do" checked/> To-Do &nbsp;
+              <input
+                type="radio"
+                name="options"
+                id="toDo"
+                value="To Do"
+                checked
+              />
+              <!-- keep checked for validation without JS -->
+              To-Do &nbsp;
             </label>
             <label class="radio-inline">
               <input
@@ -146,18 +156,18 @@
               Review &nbsp;
             </label>
             <label class="radio-inline">
-              <input type="radio" name="options" id="Done" value="Done" />Done 
+              <input type="radio" name="options" id="Done" value="Done" />
+              Done
             </label>
           </div>
-          
+
           <div>
-            <button type="submit" class="custom-btn btn-1">Submit </button>
+            <button type="submit" class="custom-btn btn-1">Submit</button>
           </div>
         </div>
       </form>
 
       <!-- form ends here -->
-   
     </main>
 
     <!-- footer and image start here -->
@@ -168,7 +178,7 @@
           src="./images/3DlogoWhite-02.svg"
           alt="3d logo"
           width="180px"
-        /><strong> Copyright 2021 @3D Junior designers</strong>
+        /><strong> Copyright 2021 &copy; 3D Junior designers</strong>
       </p>
       <picture id="logo"> </picture>
     </footer>

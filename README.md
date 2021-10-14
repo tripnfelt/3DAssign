@@ -2,7 +2,6 @@
 
 Lorem ipsum... description about assignment for generation bootcamp
 
-
 ## Live [Demo](https://tripnfelt.github.io/3DAssign/)
 
 and Link to our github repo **Bold**
@@ -16,7 +15,6 @@ Lorem
 ## Code Example
 
 <lalalala ;;
-
 
 ## Contributors
 

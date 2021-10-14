@@ -13,8 +13,6 @@ const createTaskHtml = (taskName, comment, names, dueDate, taskStatus, id) => {
   }">Done</button>
   <button class="delete-button btn-2" id="deleteButton">Delete</button>
   <button class="update-button btn-2" id="updateButton">Update</button>
-
-  
 </p>
 </div>  
 </div>`;
@@ -30,7 +28,6 @@ class TaskManager {
     this.currentId = currentId;
   }
 
-
   addTask(taskName, comment, names, dueDate, taskStatus) {
     //Add task method
     const task = {
@@ -44,7 +41,6 @@ class TaskManager {
 
     // let unAssignedName = document.getElementById(names.value).innerHTML;
     // console.log(unAssignedName);
-
 
     this.tasks.push(task);
   }
