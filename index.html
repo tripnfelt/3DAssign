@@ -91,7 +91,7 @@
             id="taskName"
           />
           <div class="valid-feedback">Looks good!</div>
-          <div class="invalid-feedback">Please provide a valid Task name.</div>
+          <div class="invalid-feedback">Minimum length of 6 Characters.</div>
 
           <div class="col">
             <label id="taskDescription" for="comment">Description</label>
@@ -99,7 +99,7 @@
 
             <div class="valid-feedback">Looks good!</div>
             <div class="invalid-feedback">
-              Please provide a valid Task Description.
+              Minimum length of 20 Characters.
             </div>
           </div>
 
@@ -113,16 +113,16 @@
               id="dueDate"
             />
             <div class="valid-feedback">Looks good!</div>
-            <div class="invalid-feedback">Please provide a valid Due Date.</div>
+            <div class="invalid-feedback">Due Date must be in the future.</div>
           </div>
 
           <br />
           <label for="names">Assign to:</label><br>
           <select name="names" id="names">
             <optgroup label="Assign to">
-              <option value="sj" id="sj">Steve Jobs</option>
-              <option value="em" id="em">Elon Musk</option>
-              <option value="jb" id="jb">Jeff Bezos</option>
+              <option value="Steve Jobs" id="sj">Steve Jobs</option>
+              <option value="Elon Musk" id="em">Elon Musk</option>
+              <option value="Jeff Bezos" id="jb">Jeff Bezos</option>
             </optgroup>
           </select>
           <br>
@@ -130,19 +130,19 @@
           <div class="btn-group" data-toggle="buttons" id="taskStatus">
             <span>Status: </span>
             <label class="radio-inline">
-              <input type="radio" name="options" id="toDo" value="toDo" /> To-Do
+              <input type="radio" name="options" id="toDo" value="To Do" checked/> To-Do
             </label>
             <label class="radio-inline">
               <input
                 type="radio"
                 name="options"
                 id="inProgress"
-                value="inProgress"
+                value="In Progress"
               />
               In Progress
             </label>
             <label class="radio-inline">
-              <input type="radio" name="options" id="review" value="review" />
+              <input type="radio" name="options" id="review" value="Review" />
               Review
             </label>
             <label class="radio-inline">

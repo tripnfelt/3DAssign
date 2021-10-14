@@ -16,6 +16,8 @@ form.addEventListener("submit", (event) => {
   const validateStatus = document.querySelector("#taskStatus");
   let validationFail = 0;
 
+
+
   event.preventDefault();
   //
   // Call this to clear all the form fields after the submission
@@ -160,6 +162,8 @@ taskList.addEventListener("click", (event) => {
     taskManager.render();
   }
   
+
+  //update button
   if (event.target.classList.contains("update-button")) {
     //     // Get the correct parent Task, yours might be slightly different
     //     // Use console.log(event.target.parentElement) to see
@@ -167,12 +171,13 @@ taskList.addEventListener("click", (event) => {
     //     // Get the taskId of the parent Task and turn it into a number.
     const taskId = Number(parentTask.dataset.taskId);
 
+    //find the text areas parent tree
     const textArea = event.target.parentElement.parentElement.parentElement.childNodes[3].childNodes[1]
     const textAreaValue = textArea.value
     console.log(textAreaValue)
     //     // Get the task from the TaskManager using the taskId
     const task = taskManager.getTaskById(taskId);
-    //     // Update the task status to 'DONE'
+    alert("Task description updated and saved");
 
     task.comment = textAreaValue;
     // //     // Render the tasks

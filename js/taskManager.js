@@ -5,7 +5,7 @@ const createTaskHtml = (taskName, comment, names, dueDate, taskStatus, id) => {
 <p>Task: ${taskName}</p>
 <p>Description: <textarea id="desctextarea" rows="3" cols="20" id="text">${comment}</textarea></p>
 <p>Assigned To: ${names}</p>
-<p>Due Date:${dueDate}</p>
+<p>Due Date: ${dueDate}</p>
 <p>Status: ${taskStatus}</p>
 <div><p>
   <button class="done-button btn-2 ${
@@ -30,6 +30,7 @@ class TaskManager {
     this.currentId = currentId;
   }
 
+
   addTask(taskName, comment, names, dueDate, taskStatus) {
     //Add task method
     const task = {
@@ -40,6 +41,10 @@ class TaskManager {
       dueDate: dueDate,
       taskStatus: taskStatus,
     };
+
+    // let unAssignedName = document.getElementById(names.value).innerHTML;
+    // console.log(unAssignedName);
+
 
     this.tasks.push(task);
   }
