@@ -82,6 +82,10 @@ button {
   height: 400px; */
   padding: 10px;
   margin: 10px;
+  transition: transform 0.3s, background 0.3s;
+  &:hover {
+    transform: scale(1.09);
+  }
   
 }
 

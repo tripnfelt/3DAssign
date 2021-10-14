@@ -24,7 +24,7 @@ form.addEventListener("submit", (event) => {
   const clearFormFields = () => {
     validateName.value = "";
     validateDescription.value = "";
-    validateAssignedTo.value = "";
+    validateAssignedTo.value = "Steve Jobs"; //always have a value selected in drop down
     validateStatus.value = "In Progress";
     validateDueDate.value = "";
     validateName.classList.remove("is-valid");
@@ -84,17 +84,18 @@ form.addEventListener("submit", (event) => {
   var selectedDate = new Date(validateDueDate.value);
   var now = new Date();
   // console.log("date now ++++" + now + "date entered" + selectedDate);
-  if (selectedDate < now) {
+  if (selectedDate < now || selectedDate === "") {
      validateDueDate.classList.add("is-invalid");
      validateDueDate.classList.remove("is-valid");
      validationFail++;
-    //  alert("Date must be in the future");
+    
      } else {
      validateDueDate.classList.add("is-valid");
      validateDueDate.classList.remove("is-invalid");
      }
-
-  // if (validateDueDate.value) {
+console.log("selected date is " + selectedDate);
+  // if (validateDueDate.value) 
+  //     if (isNaN(validateDueDate.value)){
   //   validateDueDate.classList.add("is-valid");
   //   validateDueDate.classList.remove("is-invalid");
   // } else {
