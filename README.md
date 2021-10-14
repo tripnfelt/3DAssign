@@ -1,10 +1,10 @@
 # Task Manager by Team 3D
 
-Group Assignment for Generation Australia Junior Web Dev bootcamp. To build a feautre packed To-do List/Task Manager
+Group Assignment for Generation Australia Junior Web Dev bootcamp. To build a feature-packed To-do List/Task Manager
 
 ## Live [Demo](https://tripnfelt.github.io/3DAssign/)
 
-and Link to our github repo **Bold**
+**[Link to our github repo](https://github.com/tripnfelt/3DAssign)**
 
 ## Features
 
