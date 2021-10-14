@@ -78,13 +78,13 @@ form.addEventListener("submit", (event) => {
   }
   //log if there's a validation fail to console
   console.log(validationFail);
-  // Form validation for Due Date Field not empty
+  
   // try your own validation for a date in the future
 
   var selectedDate = new Date(validateDueDate.value);
   var now = new Date();
   // console.log("date now ++++" + now + "date entered" + selectedDate);
-  if (selectedDate < now || selectedDate === "") {
+  if ( (selectedDate < now) || (isNaN(selectedDate)) ) {
      validateDueDate.classList.add("is-invalid");
      validateDueDate.classList.remove("is-valid");
      validationFail++;
@@ -93,9 +93,13 @@ form.addEventListener("submit", (event) => {
      validateDueDate.classList.add("is-valid");
      validateDueDate.classList.remove("is-invalid");
      }
-console.log("selected date is " + selectedDate);
-  // if (validateDueDate.value) 
-  //     if (isNaN(validateDueDate.value)){
+if (isNaN(selectedDate)) {
+  console.log("lalalal " + selectedDate);
+}
+  
+// Form validation for Due Date Field not empty
+
+// if (validateDueDate.value) {
   //   validateDueDate.classList.add("is-valid");
   //   validateDueDate.classList.remove("is-invalid");
   // } else {
@@ -105,6 +109,8 @@ console.log("selected date is " + selectedDate);
   //   validationFail++;
   // }
   
+
+  //checking which of group of radio buttons selected
   let whichischecked;
 
   function displayRadioValue() {
